@@ -1,76 +1,9 @@
 (function($){("use strict");function loader(){$(window).on('load',function(){$('#ctn-preloader').addClass('loaded');$("#loading").fadeOut(500);if($('#ctn-preloader').hasClass('loaded')){$('#preloader').delay(900).queue(function(){$(this).remove();});}});}
 loader();$("#mobile-menu").meanmenu({meanMenuContainer:".mobile-menu",meanScreenWidth:"1199",meanExpand:['<i class="fal fa-plus"></i>'],});$("#mobile-menu2").meanmenu({meanMenuContainer:".mobile-menu2",meanScreenWidth:"3000",meanExpand:['<i class="fal fa-plus"></i>'],});$(".close-sidebar,.offcanvas-overlay").on("click",function(){$(".sidebar-cart").removeClass("cart-open");$(".offcanvas-overlay").removeClass("overlay-open");});$(".action-item-cart").on("click",function(){$(".sidebar-cart").addClass("cart-open");$(".offcanvas-overlay").addClass("overlay-open");});$(".cp-search-btn").on("click",function(){$(".search__popup").addClass("search-opened");});$(".search-close-btn, .offcanvas-overlay").on("click",function(){$(".search__popup").removeClass("search-opened");});var lastScrollTop=300;$(window).scroll(function(event){var scroll=$(this).scrollTop();if(scroll>lastScrollTop){$('#menu-show-hide').removeClass('cp-sticky');}else{$('#menu-show-hide').addClass('cp-sticky');}
 if(scroll<300){$("#menu-show-hide").removeClass("cp-sticky");}
-lastScrollTop=scroll;});$("[data-background").each(function(){$(this).css("background-image","url( "+$(this).attr("data-background")+"  )");});$("select").niceSelect();function tp_settings_append($x){var settings=$("body");let dark;$x==true?(dark="d-block"):(dark="d-none");var settings_html=`<div class="tp-theme-settings-area transition-3">
-		<div class="tp-theme-wrapper">
-		   <div class="tp-theme-header text-center">
-			  <h4 class="tp-theme-header-title">Theme Settings</h4>
-		   </div>
+lastScrollTop=scroll;});
+$("[data-background").each(function(){$(this).css("background-image","url( "+$(this).attr("data-background")+"  )");});$("select").niceSelect();function tp_settings_append($x){var settings=$("body");let dark;$x==true?(dark="d-block"):(dark="d-none");var settings_html=`<div class="tp-theme-settings-area transition-3">
 
-		   <!-- THEME TOGGLER -->
-		   <div class="tp-theme-toggle mb-20 ${dark}" style="display:none">
-			  <label class="tp-theme-toggle-main" for="tp-theme-toggler">
-				 <span class="tp-theme-toggle-dark"><i class="fa-light fa-moon"></i> Dark</span>
-					<input type="checkbox" id="tp-theme-toggler">
-					<i class="tp-theme-toggle-slide"></i>
-				 <span class="tp-theme-toggle-light active"><i class="fa-light fa-sun-bright"></i> Light</span>
-			  </label>
-		   </div>
-
-		   <!--  RTL SETTINGS -->
-		   <div class="tp-theme-dir mb-20">
-			  <label class="tp-theme-dir-main" for="tp-dir-toggler">
-				 <span class="tp-theme-dir-rtl"> RTL</span>
-					<input type="checkbox" id="tp-dir-toggler">
-					<i class="tp-theme-dir-slide"></i>
-				 <span class="tp-theme-dir-ltr active"> LTR</span>
-			  </label>
-		   </div>
-
-		   <!-- COLOR SETTINGS -->
-		   <div class="tp-theme-settings">
-			  <div class="tp-theme-settings-wrapper">
-				 <div class="tp-theme-settings-open">
-					<button class="tp-theme-settings-open-btn">
-					   <span class="tp-theme-settings-gear">
-						  <i class="fal fa-cog"></i>
-					   </span>
-					   <span class="tp-theme-settings-close">
-						  <i class="fal fa-times"></i>
-					   </span>
-					</button>
-				 </div>
-				 <div class="row row-cols-4 gy-2 gx-2">
-					<div class="col">
-					   <div class="tp-theme-color-item tp-color-active">
-					   <button class="tp-theme-color-btn tp-color-settings-btn d-none" data-color-default="#FF3737" type="button" data-color="#FF3737"></button>
-						  <button class="tp-theme-color-btn tp-color-settings-btn" type="button" data-color="#FF3737"></button>
-					   </div>
-					</div>
-					<div class="col">
-					   <div class="tp-theme-color-item tp-color-active">
-						  <button class="tp-theme-color-btn tp-color-settings-btn" type="button" data-color="#FBD017"></button>
-					   </div>
-					</div>
-					<div class="col">
-					   <div class="tp-theme-color-item tp-color-active">
-						  <button class="tp-theme-color-btn tp-color-settings-btn" type="button" data-color="#138c17"></button>
-					   </div>
-					</div>
-					<div class="col">
-					   <div class="tp-theme-color-item tp-color-active">
-						  <button class="tp-theme-color-btn tp-color-settings-btn" type="button" data-color="#73c100"></button>
-					   </div>
-					</div>
-				 </div>
-			  </div>
-			  <div class="tp-theme-color-input">
-				 <h6>Choose Custom Color</h6>
-				 <input type="color" id="tp-color-setings-input" value="#0b3d2c">
-				 <label id="tp-theme-color-label" for="tp-color-setings-input"></label>
-			  </div>
-		   </div>
-		</div>
 	 </div>`;settings.append(settings_html);}
 tp_settings_append(false);$(".tp-theme-settings-open-btn").on("click",function(){$(".tp-theme-settings-area").toggleClass("settings-opened");});$(".slider-drag").on("mouseenter",function(){$(".mouseCursor").addClass("cursor-big");});$(".slider-drag").on("mouseleave",function(){$(".mouseCursor").removeClass("cursor-big");});$("a,.sub-menu").on("mouseenter",function(){$(".mouseCursor").addClass("d-none");});$("a,.sub-menu").on("mouseleave",function(){$(".mouseCursor").removeClass("d-none");});function itCursor(){var myCursor=jQuery(".mouseCursor");if(myCursor.length){if($("body")){const e=document.querySelector(".cursor-inner"),t=document.querySelector(".cursor-outer");let n,i=0,o=!1;(window.onmousemove=function(s){o||(t.style.transform="translate("+s.clientX+"px, "+s.clientY+"px)"),(e.style.transform="translate("+s.clientX+"px, "+s.clientY+"px)"),(n=s.clientY),(i=s.clientX);}),$("body").on("mouseenter","button, a, .cursor-pointer",function(){e.classList.add("cursor-hover"),t.classList.add("cursor-hover");}),$("body").on("mouseleave","button, a, .cursor-pointer",function(){($(this).is("a","button")&&$(this).closest(".cursor-pointer").length)||(e.classList.remove("cursor-hover"),t.classList.remove("cursor-hover"));}),(e.style.visibility="visible"),(t.style.visibility="visible");}}}
 itCursor();function tp_rtl_settings(){$("#tp-dir-toggler").on("change",function(){toggle_rtl();window.location.reload();});function tp_set_scheme(tp_dir){localStorage.setItem("tp_dir",tp_dir);document.documentElement.setAttribute("dir",tp_dir);if(tp_dir==="rtl"){var list=$("[href='assets/css/bootstrap.css']");$(list).attr("href","assets/css/bootstrap.rtl.css");}else{var list=$("[href='assets/css/bootstrap.css']");$(list).attr("href","assets/css/bootstrap.css");}}
