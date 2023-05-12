@@ -5469,30 +5469,30 @@ background:rgba(255,255,255,.631372549);
 		background:var(--clr-theme-1);
 	}
 	.cp-cta-form .cp-input-field .nice-select{
-	border:1px solid #414141;
-	float:none;
-font-size:16px;
-font-weight:400;
-height:55px;
-line-height:54px;
-background:0 0;
-color:var(--clr-common-placeholder);
-}
+		border:1px solid #414141;
+		float:none;
+		font-size:16px;
+		font-weight:400;
+		height:55px;
+		line-height:54px;
+		background:0 0;
+		color:var(--clr-common-placeholder);
+	}
 .cp-cta-form .cp-input-field .nice-select::after{
 	border-bottom:none;
 	border-right:none;
-content:"\f175";
-display:block;
-right:30px;
-top:3px;
--webkit-transform:none;
--moz-transform:none;
--ms-transform:none;
-transform:none;
-width:5px;
-font-family:"font awesome 5 pro";
-color:var(--clr-common-white);
-font-size:17px;
+	content:"\f175";
+	display:block;
+	right:30px;
+	top:3px;
+	-webkit-transform:none;
+	-moz-transform:none;
+	-ms-transform:none;
+	transform:none;
+	width:5px;
+	font-family:"font awesome 5 pro";
+	color:var(--clr-common-white);
+	font-size:17px;
 }
 .cp-cta-form .cp-input-field .nice-select .list{
 	width:100%;
