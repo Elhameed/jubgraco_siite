@@ -3903,11 +3903,10 @@ transition:all .3s ease-out 0s;
 .cp-spacial-offer-wrap .swiper-slide:nth-child(2n) .cp-spacial-offer-item .cp-spacial-offer-title a{
 	background:linear-gradient(90.45deg,#FF3737 3.97%,#FBD017 99.84%);
 	-webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-background-clip:text;
-text-fill-color:transparent;
-position:relative;
-display:inline-block;
+	-webkit-text-fill-color:transparent;
+	background-clip:text;
+	position:relative;
+	display:inline-block;
 }
 .cp-spacial-offer-wrap .swiper-slide:nth-child(2n) .cp-spacial-offer-item .cp-spacial-offer-title a::before{
 	content:"";
@@ -9423,12 +9422,12 @@ animation-timing-function:linear;
 	.cp-bg-move-xy{
 	-webkit-animation-name:cp-bg-move-xy;
 	animation-name:cp-bg-move-xy;
--webkit-animation-duration:2s;
-animation-duration:2s;
--webkit-animation-iteration-count:infinite;
-animation-iteration-count:infinite;
--webkit-animation-timing-function:linear;
-animation-timing-function:linear;
+	-webkit-animation-duration:2s;
+	animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+	animation-timing-function:linear;
 }
 @-webkit-keyframes cp-round-rotation1{
 	0%{
@@ -9519,13 +9518,13 @@ animation-timing-function:linear;
 }
 @-webkit-keyframes cp-width-come-down{
 		0%{
-		width:0;
-	left:0;
-}
-25%{
-		width:25%;
-	}
-	50%{
+			width:0;
+			left:0;
+		}
+		25%{
+			width:25%;
+		}
+		50%{
 			width:50%;
 		}
 		75%{
